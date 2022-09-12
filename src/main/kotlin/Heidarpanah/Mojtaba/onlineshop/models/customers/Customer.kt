@@ -13,11 +13,11 @@ data class Customer(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id:Long = 0,
-    val firstName:String = "",
-    val lastName:String= "",
-    val address:String= "",
-    val phone:String= "",
-    val postalCode:String = "",
+    var firstName:String = "",
+    var lastName:String= "",
+    var address:String= "",
+    var phone:String= "",
+    var postalCode:String = "",
     @OneToOne(mappedBy = "customer")
     var user:User?= null)
 

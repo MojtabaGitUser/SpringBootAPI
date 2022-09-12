@@ -10,9 +10,9 @@ data class Invoice(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id:Long=0,
     val number:Int=0,
-    val status:InvoiceStatus=InvoiceStatus.notPayed,
+    var status:InvoiceStatus=InvoiceStatus.notPayed,
     val addDate:String="",
-    val paymentDate:String="",
+    var paymentDate:String="",
 
     @ManyToOne
     @JoinColumn(name = "user_id")

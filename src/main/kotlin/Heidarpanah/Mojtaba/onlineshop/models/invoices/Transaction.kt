@@ -11,12 +11,12 @@ import javax.persistence.ManyToOne
 data class Transaction(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
-    val authority: String = "",
-    val status: Int = 0,
-    val refId: String = "",
+    var id: Long = 0,
+    var authority: String = "",
+    var status: Int = 0,
+    var refId: String = "",
     @ManyToOne
     @JoinColumn(name = "invoice_id")
-    val invoice: Invoice? = null
+    var invoice: Invoice? = null
 ) {
 }

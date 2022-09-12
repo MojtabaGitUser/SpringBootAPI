@@ -4,5 +4,7 @@ import Heidarpanah.Mojtaba.onlineshop.models.products.Color
 import Heidarpanah.Mojtaba.onlineshop.models.site.Slider
 import org.springframework.data.repository.PagingAndSortingRepository
 
-interface ColorRepository:PagingAndSortingRepository<Color,Long> {
+interface ColorRepository : PagingAndSortingRepository<Color, Long> {
+
+    override fun findAll(): List<Color>
 }

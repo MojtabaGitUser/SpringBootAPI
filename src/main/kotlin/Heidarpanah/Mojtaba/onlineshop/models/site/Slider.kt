@@ -10,8 +10,8 @@ data class Slider(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
-    val Image: String = "",
-    val title: String = "",
-    val subTitle: String = "",
-    val link: String = ""
+    var Image: String = "",
+    var title: String = "",
+    var subTitle: String = "",
+    var link: String = ""
 )

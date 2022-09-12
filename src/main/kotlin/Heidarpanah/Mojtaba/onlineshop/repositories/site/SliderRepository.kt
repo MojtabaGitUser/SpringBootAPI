@@ -4,4 +4,8 @@ import Heidarpanah.Mojtaba.onlineshop.models.site.Slider
 import org.springframework.data.repository.PagingAndSortingRepository
 
 interface SliderRepository:PagingAndSortingRepository<Slider,Long> {
+
+    override fun findAll(): List<Slider> {
+        TODO("Not yet implemented")
+    }
 }
