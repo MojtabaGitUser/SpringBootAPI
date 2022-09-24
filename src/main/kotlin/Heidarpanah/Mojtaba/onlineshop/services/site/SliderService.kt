@@ -1,4 +1,4 @@
-package Heidarpanah.Mojtaba.onlineshop.Services.site
+package Heidarpanah.Mojtaba.onlineshop.services.site
 
 import Heidarpanah.Mojtaba.onlineshop.models.site.Slider
 import Heidarpanah.Mojtaba.onlineshop.repositories.site.SliderRepository

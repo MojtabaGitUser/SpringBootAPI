@@ -26,6 +26,15 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.postgresql:postgresql")
 
+	//Gson
+	implementation("com.google.code.gson:gson:2.9.1")
+	//json Web Token
+	implementation("io.jsonwebtoken:jjwt:0.9.1")
+
+
+	implementation("io.jsonwebtoken:jjwt:0.9.1")
+
+
 }
 
 tasks.withType<KotlinCompile> {

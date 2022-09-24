@@ -13,10 +13,10 @@ import javax.persistence.Table
 @Entity
 @Table(name = "users")
 data class User(
-   @Id
+    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id:Long = 0,
-    var userName:String ="",
+    var username:String ="",
     var password:String = "",
     @OneToOne
     @JoinColumn(name = "customer_id")

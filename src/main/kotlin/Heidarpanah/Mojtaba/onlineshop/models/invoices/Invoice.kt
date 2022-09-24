@@ -2,6 +2,7 @@ package Heidarpanah.Mojtaba.onlineshop.models.invoices
 
 import Heidarpanah.Mojtaba.onlineshop.models.customers.User
 import Heidarpanah.Mojtaba.onlineshop.models.enums.InvoiceStatus
+import com.fasterxml.jackson.annotation.JsonIgnore
 import javax.persistence.*
 
 @Entity
@@ -9,11 +10,11 @@ data class Invoice(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id:Long=0,
-    val number:Int=0,
     var status:InvoiceStatus=InvoiceStatus.notPayed,
-    val addDate:String="",
+    var addDate:String="",
     var paymentDate:String="",
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id")
     val user: User?=null,
@@ -22,7 +23,7 @@ data class Invoice(
     val items : Set<InvoiceItem>?=null,
 
     @OneToMany(mappedBy = "invoice")
-    val transactions : Set<Transaction>?=null
+    var transactions : Set<Transaction>?=null
 
 
                    )

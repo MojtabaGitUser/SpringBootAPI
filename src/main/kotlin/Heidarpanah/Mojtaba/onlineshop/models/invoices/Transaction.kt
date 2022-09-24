@@ -1,5 +1,6 @@
 package Heidarpanah.Mojtaba.onlineshop.models.invoices
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
@@ -15,6 +16,7 @@ data class Transaction(
     var authority: String = "",
     var status: Int = 0,
     var refId: String = "",
+   @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "invoice_id")
     var invoice: Invoice? = null
